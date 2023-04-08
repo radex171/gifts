@@ -1,0 +1,29 @@
+.Header {
+  width: 100vw;
+  height: 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Header .Header__nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #054774;
+}
+.Header .Header__nav .Header__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  color: white;
+}
+.Header .Header__nav .Header__link:focus {
+  border-bottom: double 0.2rem #fdb44b;
+  border-radius: 0.3rem;
+  color: #c8ff00;
+}/*# sourceMappingURL=Header.css.map */
