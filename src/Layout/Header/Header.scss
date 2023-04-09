@@ -35,3 +35,23 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .Header {
+    height: max-content;
+    .Header__nav {
+      height: max-content;
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      .Header__link {
+        margin: 0.3rem 0;
+        display: flex;
+        justify-content: center;
+        height: max-content;
+        width: 100%;
+      }
+    }
+  }
+}

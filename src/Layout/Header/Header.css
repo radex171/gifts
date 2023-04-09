@@ -26,4 +26,26 @@
   border-bottom: double 0.2rem #fdb44b;
   border-radius: 0.3rem;
   color: #c8ff00;
+}
+
+@media only screen and (max-width: 600px) {
+  .Header {
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .Header .Header__nav {
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Header .Header__nav .Header__link {
+    margin: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+  }
 }/*# sourceMappingURL=Header.css.map */
