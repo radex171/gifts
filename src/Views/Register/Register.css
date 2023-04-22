@@ -1,0 +1,24 @@
+@import '../../Global.css';
+.register {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5rem;
+}
+.register .register__header {
+  width: 100%;
+}
+.register .register__containerInput {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.9rem;
+}
+.register .register__containerInput .register__labelInput {
+  width: 100%;
+  margin: 0.7rem 0;
+  font-size: 1.3rem;
+}
+.register .register__containerInput .register__input {
+  padding: 0.4rem;
+  font-size: 1rem;
+}/*# sourceMappingURL=Register.css.map */

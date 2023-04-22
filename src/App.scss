@@ -1,15 +1,9 @@
-@import './Global.css';
+@import './Global.scss';
 
 .App {
   min-height: 100vh;
   width: 100vw;
 
-  display: flex;
-  flex-wrap: wrap;
-
   background-color: $dark-blue;
-
   color: white;
-
-  font-size: 2rem;
 }
