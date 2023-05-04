@@ -1,1 +1,65 @@
-/*# sourceMappingURL=Home.css.map */
+h1 {
+  font-size: 2.5rem;
+}
+
+.home__container {
+  margin-top: 0.1rem;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__container .home__titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1.2rem 1rem 1rem 1rem black;
+}
+.home__container .home__titleContainer .home__titlePage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home__container .home__containerLogin {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__container .home__containerLogin .home__formLogin {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__container .home__containerLogin .home__formLogin .home__labelLoginInput {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 4rem;
+  font-size: 1.5rem;
+}
+.home__container .home__containerLogin .home__formLogin .home__labelLoginInput .home__titleLabel {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+}
+.home__container .home__containerLogin .home__formLogin .home__labelLoginInput .home__input {
+  display: inline;
+  box-shadow: 0.6rem 0.4rem 1rem 0.2rem black;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+}
+.home__container .home__loginButton {
+  width: auto;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0.4rem 0.2rem 1rem 0.2rem black;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.home__container .home__loginButton:hover {
+  background-color: #c8ff00;
+}/*# sourceMappingURL=Home.css.map */
