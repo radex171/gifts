@@ -6,6 +6,12 @@
   display: flex;
   flex-wrap: wrap;
 
+  .home__titleWelcomeUser {
+    width: 100%;
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
   .home__titleContainer {
     width: 100%;
     display: flex;

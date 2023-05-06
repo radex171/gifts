@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
+import axios from "axios";
 
 function Home() {
   const [loginUser, setLoginUser] = useState({
@@ -7,10 +8,8 @@ function Home() {
     password: "",
   });
 
-  function handleClick(e) {
-    e.preventDefault();
-    return console.log(loginUser);
-  }
+  const [isLogged, setIsLogged] = useState(false);
+
   function handleChange(event) {
     const { name, value } = event.target;
     setLoginUser((prevState) => {
@@ -21,13 +20,44 @@ function Home() {
     });
   }
 
+  function handleClick(e) {
+    e.preventDefault();
+    const params = {
+      username: loginUser.login,
+      password: loginUser.password,
+    };
+    axios
+      .get("/login", {
+        params: {
+          username: loginUser.login,
+          password: loginUser.password,
+        },
+      })
+      .then((result) => {
+        console.log(result, params);
+        setIsLogged(true);
+
+        // pętla if wyświetl informację : "zalogowano użytkownika"
+
+        /*jeśli zalogowano użytkownika wyświetl opcje wpłać do skarbonki na prezent,
+        zarezeruwj prezent.
+        */
+      });
+  }
+
   return (
     <main className="home__container">
       <header className="home__titleContainer">
         <h1 className="home__titlePage">Pomysły na prezenty</h1>
       </header>
 
-      <section className="home__containerLogin">
+      {isLogged ? (
+        <h2 className="home__titleWelcomeUser">Witaj {loginUser.login}</h2>
+      ) : (
+        ""
+      )}
+
+      <section className={isLogged ? "display_none" : "home__containerLogin"}>
         <form className="home__formLogin">
           <label className="home__labelLoginInput">
             <h3 className="home__titleLabel">Podaj login:</h3>
@@ -56,7 +86,11 @@ function Home() {
           </label>
         </form>
       </section>
-      <button className="home__loginButton" onClick={handleClick}>
+
+      <button
+        className={isLogged ? "display_none" : "home__loginButton"}
+        onClick={handleClick}
+      >
         Zaloguj
       </button>
     </main>

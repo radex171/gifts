@@ -2,11 +2,20 @@ h1 {
   font-size: 2.5rem;
 }
 
+.display_none {
+  display: none;
+}
+
 .home__container {
   margin-top: 0.1rem;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+}
+.home__container .home__titleWelcomeUser {
+  width: 100%;
+  font-size: 2.3rem;
+  text-align: center;
 }
 .home__container .home__titleContainer {
   width: 100%;
