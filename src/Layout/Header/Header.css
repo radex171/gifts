@@ -2,6 +2,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+.display_none {
+  display: none;
+}
+
 .Header {
   width: 100vw;
   height: 3rem;

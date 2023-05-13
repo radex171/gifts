@@ -1,4 +1,4 @@
-@import '../../Global.css';
+@import '../../Global.scss';
 
 .register {
   width: 100vw;
@@ -16,14 +16,30 @@
     margin-bottom: 1.9rem;
 
     .register__labelInput {
-      width: 100%;
+      display: grid;
       margin: 0.7rem 0;
       font-size: 1.3rem;
     }
     .register__input {
-      padding: 0.4rem;
+      margin-top: 1rem;
 
+      box-shadow: 0.6rem 0.4rem 1rem 0.2rem black;
+      border-radius: 2rem;
+      padding: 0.6rem 1rem;
       font-size: 1rem;
+    }
+  }
+  .register__sendButton {
+    width: 8rem;
+    border-radius: 2rem;
+    box-shadow: 0.4rem 0.2rem 1rem 0.2rem black;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lemon;
     }
   }
 }

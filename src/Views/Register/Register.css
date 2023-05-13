@@ -1,4 +1,11 @@
-@import '../../Global.css';
+h1 {
+  font-size: 2.5rem;
+}
+
+.display_none {
+  display: none;
+}
+
 .register {
   width: 100vw;
   display: flex;
@@ -14,11 +21,26 @@
   margin-bottom: 1.9rem;
 }
 .register .register__containerInput .register__labelInput {
-  width: 100%;
+  display: grid;
   margin: 0.7rem 0;
   font-size: 1.3rem;
 }
 .register .register__containerInput .register__input {
-  padding: 0.4rem;
+  margin-top: 1rem;
+  box-shadow: 0.6rem 0.4rem 1rem 0.2rem black;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
+}
+.register .register__sendButton {
+  width: 8rem;
+  border-radius: 2rem;
+  box-shadow: 0.4rem 0.2rem 1rem 0.2rem black;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.register .register__sendButton:hover {
+  background-color: #c8ff00;
 }/*# sourceMappingURL=Register.css.map */

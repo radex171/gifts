@@ -78,7 +78,9 @@ function Register() {
           </label>
         </section>
 
-        <button onClick={handleClick}>wyślij</button>
+        <button className="register__sendButton" onClick={handleClick}>
+          wyślij
+        </button>
       </form>
     </main>
   );

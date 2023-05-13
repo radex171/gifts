@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import axios from "axios";
+import Gift from "../../Components/Gift/Gift";
 
 function Home() {
   const [loginUser, setLoginUser] = useState({
@@ -9,6 +10,8 @@ function Home() {
   });
 
   const [isLogged, setIsLogged] = useState(false);
+
+  const [gifts, setGifts] = useState(null);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -19,7 +22,17 @@ function Home() {
       };
     });
   }
-
+  useEffect(() => {
+    function getDataGift() {
+      axios.get("/gifts").then((result) => {
+        console.log("result", result);
+        setGifts(result.data);
+      });
+    }
+    getDataGift();
+    console.log("giftState", gifts);
+  }, []);
+  console.log("po renderze", gifts);
   function handleClick(e) {
     e.preventDefault();
     const params = {
@@ -44,6 +57,8 @@ function Home() {
         */
       });
   }
+
+  console.log(gifts);
 
   return (
     <main className="home__container">
@@ -93,6 +108,15 @@ function Home() {
       >
         Zaloguj
       </button>
+
+      <section className="home__containerGifts">
+        {gifts
+          ? gifts.map((element) => {
+              console.log(element);
+              return <Gift gift={element} />;
+            })
+          : ""}
+      </section>
     </main>
   );
 }
